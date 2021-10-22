@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">UD2_Ejercicios</string>
+    <string name="textoInicial">Texto inicial</string>
+    <string name="nuevoTexto">Nuevo texto</string>
+    <string name="botonInicial">Botón inicial</string>
+    <string name="botonNuevo">Botón nuevo</string>
+    <string name="saludo">¡Hola!</string>
+    <string name="chck">Opción</string>
+
+</resources>
