@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CalculadoraPrimos</string>
+    <string name="boton">CALCULAR</string>
+    <string name="enunciado">Introduce qué número primo quieres calcular. Por ejemplo, si deseas saber el quinto número primo, pon el 5 y pulsa a calcular. Te dirá que el quinto es el 11</string>
+    <string name="titulo">CALCULADORA NUMEROS PRIMOS</string>
+    <string name="posicion">Posición</string>
+    <string name="resultadoError">El número introducido debe ser mayor de 0</string>
+    <string name="resultadoParte1">El primo número </string>
+    <string name="resultadoParte2"> es el </string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PrimeCalculator</string>
+    <string name="boton">CALCULATE</string>
+    <string name="enunciado">Enter the prime number you want to calculate. For example, if you want to know the fifth prime number, write down 5 and click calculate. It will tell you that the fifth prime is 11</string>
+    <string name="titulo">PRIME NUMBER CALCULATOR</string>
+    <string name="posicion">Position</string>
+    <string name="resultadoError">The number entered must be greater than 0 </string>
+    <string name="resultadoParte1">Prime number</string>
+    <string name="resultadoParte2">is</string>
+</resources>
