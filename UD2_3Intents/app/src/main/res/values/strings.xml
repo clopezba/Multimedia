@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">UD2_3Ejercicios</string>
+    <string name="btn">Actividad 2</string>
+    <string name="txtExtra">Esto es un string</string>
+    <string name="btnVolver">Volver</string>
+    <string name="ResultadoOK">Resultado OK</string>
+
+</resources>
