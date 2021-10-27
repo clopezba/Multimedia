@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">UD2_4Ejercicios</string>
+    <string name="datos_personales">Datos personales</string>
+    <string name="datosIdent">Datos de identificación</string>
+    <string name="datosContacto">Datos de contacto</string>
+    <string name="datosProfe">Datos profesionales</string>
+    <string name="infAcademica">Información académica</string>
+    <string name="expLaboral">Experiencia laboral</string>
+    <string name="cursos">Otros cursos</string>
+    <string name="ayuda">Ayuda</string>
+    <string name="txtOpciones">Opciones</string>
 </resources>
