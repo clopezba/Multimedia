@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Ejercicio07_Menu</string>
+    <string name="cambiarColor">Cambiar color</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="cambiaLetra">Cambiar letra</string>
+    <string name="info">Información</string>
 </resources>
