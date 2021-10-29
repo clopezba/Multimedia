@@ -1,5 +1,6 @@
 package com.example.ejercicio07_menu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 
@@ -24,17 +25,12 @@ public class MainActivity extends AppCompatActivity {
     }
      @Override
         public boolean onCreateOptionsMenu(Menu menu) {
-            MenuItem item = menu.add("Ajustes");
-            MenuItem item3 = menu.add("Información");
-            item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
-                @Override
-                public boolean onMenuItemClick(MenuItem menuItem) {
-                    Toast.makeText(getApplicationContext(),
-                            "Se ha pulsado Ajustes", Toast.LENGTH_LONG).show();
-                    return true;
-                }
-            });
+            SubMenu ajustes = menu.addSubMenu(R.string.ajustes);
+            MenuItem cambiarColor = ajustes.add(R.string.cambiarColor);
+            MenuItem cambiarLetra = ajustes.add(R.string.cambiaLetra);
+            MenuItem informacion = menu.add(R.string.info);
 
             return true;
         }
+
 }
