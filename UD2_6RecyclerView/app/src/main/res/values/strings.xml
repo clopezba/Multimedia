@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UD2_6RecyclerView</string>
+    <string name="tituloLuna">La luna</string>
+    <string name="textoLuna">La Luna es el único satélite natural de la Tierra. Con un diámetro ecuatorial de 3476 km, es el quinto satélite más grande del sistema solar, mientras que en cuanto al tamaño proporcional respecto a su planeta es el satélite más grande</string>
+    <string name="tituloMontana">La montaña</string>
+    <string name="textoMontana">Una montaña es una forma topográfica del relieve terrestre positiva, una eminencia natural que se caracteriza por su altitud y, más generalmente, por su altura relativa, o incluso por su volumen, pendiente, espaciado o continuidad.</string>
+    <string name="tituloSol">El sol</string>
+    <string name="textoSol">El Sol ​ es una estrella de tipo-G de la secuencia principal y clase de luminosidad V que se encuentra en el centro del sistema solar y constituye la mayor fuente de radiación electromagnética de este sistema planetario.</string>
+</resources>
