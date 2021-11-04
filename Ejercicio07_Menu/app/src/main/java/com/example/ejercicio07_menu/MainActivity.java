@@ -1,4 +1,4 @@
-/**
+/**Generación de un menú de opciones de forma programática.
  * @author Cristina López
  * @version 1.0
  */
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Método para crear un menú de opciones y añadirle los ítems que contendrá.
-     * @param menu El menú de opciones donde se colocarán los items (de tipo Menu).
+     * @param menu El menú de opciones donde se colocarán los items.
      * @return Valor  de tipo booleano: 'True' para que se muestre el menú, 'False' para que no se muestre.
      */
      @Override
