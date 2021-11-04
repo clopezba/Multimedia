@@ -1,3 +1,7 @@
+/**
+ * @author Cristina López
+ * @version 1.0
+ */
 package com.example.ejercicio07_menu;
 
 import androidx.annotation.NonNull;
@@ -16,13 +20,23 @@ import android.widget.ActionMenuView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    /**
+     * Método al que se llama cuando se inicia la pantalla (Activity).
+     * En este método se pone la mayoría de los elementos para la inicialización (funciones, varaibles, etc.).
+     * @param savedInstanceState Permite volver a un estado anterior de la activiad cuando se vuelve a reiniciar. Admite valor nulo.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
     }
+
+    /**
+     * Método para crear un menú de opciones y añadirle los ítems que contendrá.
+     * @param menu El menú de opciones donde se colocarán los items (de tipo Menu).
+     * @return Valor  de tipo booleano: 'True' para que se muestre el menú, 'False' para que no se muestre.
+     */
      @Override
         public boolean onCreateOptionsMenu(Menu menu) {
             SubMenu ajustes = menu.addSubMenu(R.string.ajustes);
