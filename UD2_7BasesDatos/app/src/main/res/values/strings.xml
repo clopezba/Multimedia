@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UD2_7BasesDatos</string>
+    <string name="grupo">Grupo: </string>
+    <string name="disco">Disco: </string>
+</resources>
