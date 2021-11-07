@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ejercicio08_BBDD</string>
+    <string name="anadir">Añadir</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="consultar">Consultar</string>
+    <string name="grupo">Grupo:</string>
+    <string name="disco">Disco:</string>
+    <string name="mensajeAnadir">Se añadió el disco </string>
+    <string name="mensajeEliminar">Se borró el disco</string>
+</resources>
