@@ -7,4 +7,6 @@
     <string name="disco">Disco:</string>
     <string name="mensajeAnadir">Se añadió el disco </string>
     <string name="mensajeEliminar">Se borró el disco</string>
+    <string name="mensajeActualizar">Se ha actualizado</string>
+    <string name="volver">Volver</string>
 </resources>

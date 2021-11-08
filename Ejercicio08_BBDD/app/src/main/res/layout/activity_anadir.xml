@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/txtGrupo"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/grupo"
@@ -23,10 +23,9 @@
 
         <EditText
             android:id="@+id/editGrupo"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_weight="3"
             android:inputType="textPersonName"
             android:text="" />
     </LinearLayout>
@@ -40,7 +39,7 @@
 
         <TextView
             android:id="@+id/txtDisco"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/disco"
@@ -48,10 +47,9 @@
 
         <EditText
             android:id="@+id/editDisco"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
+            android:layout_weight="3"
             android:inputType="textPersonName"
             android:text="" />
     </LinearLayout>
@@ -66,6 +64,13 @@
             android:id="@+id/btnAnadir"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Añadir" />
+            android:text="@string/anadir" />
+
+        <Button
+            android:id="@+id/btnVolver1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/volver" />
+
     </LinearLayout>
 </LinearLayout>
