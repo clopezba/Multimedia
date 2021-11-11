@@ -1,28 +1,28 @@
+/**
+ * Aplicación que permite gestionar una base de datos. Permite insertar, eliminar, consultar y actualizar discos de música.
+ * @author Cristina López
+ * @version 1.0
+ */
 package com.example.ejercicio08_bbdd;
 
-import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Button anadir, eliminar, consultar;
     Intent int_Anadir, int_Eliminar, int_Consultar;
-    ActivityResultLauncher<Intent> someActivityResultLauncher;
-
     protected static SQLiteDatabase db;
 
-
+    /**
+     * Método al que se llama cuando se inicia la pantalla (Activity).
+     * En este método se pone la mayoría de los elementos para la inicialización (funciones, varaibles, etc.).
+     * @param savedInstanceState Permite volver a un estado anterior de la activiad cuando se vuelve a reiniciar. Admite valor nulo.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,16 +32,18 @@ public class MainActivity extends AppCompatActivity {
         eliminar = (Button) findViewById(R.id.eliminar);
         consultar = (Button) findViewById(R.id.consultar);
 
-        cambiarActividad(someActivityResultLauncher);
+        cambiarActividad();
 
+        //Creación o apertura de base de datos
         db = openOrCreateDatabase("MisDiscos",Context.MODE_PRIVATE, null);
-
         db.execSQL("CREATE TABLE IF NOT EXISTS MisDiscos(Grupo VARCHAR, Disco VARCHAR);");
-
-
-
     }
-    public void cambiarActividad(ActivityResultLauncher<Intent> ResultLauncher){
+
+    /**
+     * Gestiona el cambio de pantalla según el botón presionado. Se establecen los 'intents'
+     * para las opciones de insertar, eliminar y consultar datos de la base de datos.
+     */
+    public void cambiarActividad(){
         int_Anadir = new Intent(this, AnadirActivity.class);
         anadir.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,7 +1,9 @@
+/**
+ * Permite eliminar un registro de la base de datos.
+ */
 package com.example.ejercicio08_bbdd;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +15,12 @@ public class EliminarActivity extends AppCompatActivity {
 
     Button btnEliminar, btnVolver;
     EditText editGrupo, editDisco;
+
+    /**
+     * Método al que se llama cuando se inicia la pantalla (Activity).
+     * En este método se pone la mayoría de los elementos para la inicialización (funciones, varaibles, etc.).
+     * @param savedInstanceState Permite volver a un estado anterior de la activiad cuando se vuelve a reiniciar. Admite valor nulo.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +31,10 @@ public class EliminarActivity extends AppCompatActivity {
         editGrupo = (EditText) findViewById(R.id.editGrupo);
         editDisco = (EditText) findViewById(R.id.editDisco);
 
+        /**
+         * Al pulsar el botón 'Eliminar' borra el registro que se corresponde con el grupo y disco
+         * indicados en los 'EditView' de grupo y disco. Muestra un mensaje emergente indicando el disco eliminado.
+         */
         btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +48,10 @@ public class EliminarActivity extends AppCompatActivity {
                 editDisco.setText("");
             }
         });
+
+        /**
+         * Cuando se pulsa el botón 'Volver' se vuelve a la pantalla principal de la aplicación.
+         */
         Intent volver = new Intent(getApplicationContext(), MainActivity.class);
         btnVolver.setOnClickListener(new View.OnClickListener() {
             @Override
