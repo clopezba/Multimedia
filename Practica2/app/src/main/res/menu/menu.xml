@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/instruc"
+        android:orderInCategory="1"
+        android:title="Instrucciones" />
+    <item android:id="@+id/nuevo"
+        android:orderInCategory="2"
+        android:title="Nuevo juego" />
+    <item android:id="@+id/config"
+        android:orderInCategory="3"
+        android:title="Configuración juego" />
+</menu>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="configNivel">
+        <item>Nivel Principiante</item>
+        <item>Nivel Amateur</item>
+        <item>Nivel Avanzado</item>
+    </string-array>
+</resources>

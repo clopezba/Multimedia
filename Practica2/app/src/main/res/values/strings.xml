@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Practica2</string>
+    <string name="instrucTitulo">Instrucciones</string>
+    <string name="instrucciones">El juego es tipo buscaminas: Cuando pulsas en una casilla, sale un
+        número que identifica cuántas hipotenochas hay alrededor. Ten cuidado porque si pulsas en una
+        casilla que tenga una hipotenocha escondida, perderás. Si crees o tienes la certeza de que hay
+        una hipotenocha, haz click largo sobre la casilla para señalarla. No hagas un click largo en
+        una casilla donde no hay una hipotenocha porque perderás. Ganas una vez hayas encontrado todas
+        las hipotenochas.</string>
+    <string name="ok">"Ok"</string>
+    <string name="configTitulo">Dificultad</string>
+    <string name="volver">Volver</string>
+</resources>
