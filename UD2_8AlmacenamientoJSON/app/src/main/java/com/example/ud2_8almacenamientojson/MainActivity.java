@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder result = null;
         HttpURLConnection urlConnection = null;
 
+        //Conectamos y leemos todo lo que tenga la web
         @Override
         protected String doInBackground(String... string) {
             try {
@@ -77,9 +78,10 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
             urlConnection.disconnect();
-            return result.toString();
+            return result.toString(); //Devuelve todo lo que veo cuando accedo a la web
         }
 
+        //Recibe todo lo que recojo de la web en el método anterior
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);
@@ -88,20 +90,26 @@ public class MainActivity extends AppCompatActivity {
             ArrayList<String> elementos = new ArrayList<String>();
 
             try {
+                //El JSON es un Array de objetos
                 JSONArray listado = new JSONArray(result);
-                String valor = null;
+
+                //Recorro todos los objetos del array
                 for (int i = 0; i < listado.length(); i++) {
+                    //Creo el objeto i del array general
                     JSONObject obj = listado.getJSONObject(i);
+                    //Obtengo un valor del objeto
                     String nombre = obj.getString("Nombre");
+                    //Obtengo un array contenido en el objeto
                     JSONArray data = obj.getJSONArray("Data");
-                    for (int j = 0; j < data.length(); j++){
-                       JSONObject obj2 = data.getJSONObject(j);
-                       valor = obj2.getString("Valor");
-                    }
+                    //Guargo el objeto 0 (unico) del array Data
+                    JSONObject obj2 = data.getJSONObject(0);
+                    //Obtengo un valor del objeto
+                    String valor = obj2.getString("Valor");
+
                     Log.d("consola", nombre);
                     Log.d("consola", valor);
-                    elementos.add(nombre);
-                    elementos.add(valor);
+                    String cadena = nombre + "\n\t\t" + valor;
+                    elementos.add(cadena);
                 }
                 adaptador = new ArrayAdapter<>(getApplicationContext(), R.layout.fila, elementos);
                 list.setAdapter(adaptador);

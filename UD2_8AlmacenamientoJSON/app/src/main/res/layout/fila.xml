@@ -4,4 +4,5 @@
     android:layout_height="wrap_content"
     android:textColor="@color/teal_700"
     android:textStyle="bold"
+    android:textSize="18dp"
     android:text="" />

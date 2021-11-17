@@ -12,6 +12,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -22,16 +23,19 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    LinearLayout ll;
+    //TableLayout etiquetaTabla;
+
     //Nivel: 0 = Principiante, 1 = Amateur, 2 = Avanzado
     int nivel = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        LinearLayout ll = (LinearLayout) findViewById(R.id.linear);
+        ll = (LinearLayout) findViewById(R.id.linear);
 
-        TableLayout etiquetaTabla = dibujarTabla(8,8);
-        ll.addView(etiquetaTabla);
+       // etiquetaTabla = dibujarTabla(8,8);
+        ll.addView(dibujarTabla(8,8));
     }
 
     //--------------- MENÚ -------------------
@@ -80,14 +84,18 @@ public class MainActivity extends AppCompatActivity {
                         switch(item){
                             case 0:
                                 nivel = 0;
-                                
+                                ll = (LinearLayout) findViewById(R.id.linear);
+                                ll.addView(dibujarTabla(8,8));
                                 break;
                             case 1:
                                 nivel = 1;
-                                setContentView(R.layout.activity_main);
+                                ll = (LinearLayout) findViewById(R.id.linear);
+                                ll.addView(dibujarTabla(12,12));
                                 break;
                             case 2:
                                 nivel = 2;
+                                ll = (LinearLayout) findViewById(R.id.linear);
+                                ll.addView(dibujarTabla(16,16));
                                 break;
                         }
                     }
@@ -106,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         tabla.setGravity(Gravity.CENTER);
 
         TableRow fila = new TableRow(this);
+
         int numeroCeldas = numeroFilas * numeroColumnas;
         int contadorColumnas = 0;
         int contadorFilas = 0;
@@ -131,7 +140,8 @@ public class MainActivity extends AppCompatActivity {
             borde.setBackgroundColor(Color.parseColor("#FF00FF"));
 
             Button btn = new Button(this);
-            btn.setLayoutParams(new LinearLayout.LayoutParams(130, 190));
+
+            btn.setText(String.valueOf(1));
             btn.setPadding(2,2,2,2);
             btn.setBackgroundColor(Color.parseColor("#663377"));
             borde.addView(btn);
