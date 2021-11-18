@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UD2_8Sockets</string>
+    <string name="btnCerrar">Cerrar servidor</string>
+    <string name="btnCliente">Enviar petición</string>
+    <string name="btnAbrir">Abrir servidor</string>
+</resources>
