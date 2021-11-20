@@ -1,13 +1,18 @@
 <resources>
-    <string name="app_name">Practica2</string>
+    <string name="app_name">BuscAliens</string>
     <string name="instrucTitulo">Instrucciones</string>
     <string name="instrucciones">El juego es tipo buscaminas: Cuando pulsas en una casilla, sale un
-        número que identifica cuántas hipotenochas hay alrededor. Ten cuidado porque si pulsas en una
-        casilla que tenga una hipotenocha escondida, perderás. Si crees o tienes la certeza de que hay
-        una hipotenocha, haz click largo sobre la casilla para señalarla. No hagas un click largo en
-        una casilla donde no hay una hipotenocha porque perderás. Ganas una vez hayas encontrado todas
-        las hipotenochas.</string>
+        número que identifica cuántos aliens hay alrededor. Ten cuidado porque si pulsas en una
+        casilla que tenga un alien escondido, perderás. Si crees o tienes la certeza de que hay
+        un alien, haz click largo sobre la casilla para señalarla. No hagas un click largo en
+        una casilla donde no hay un alien porque perderás. Ganas una vez hayas encontrado todos
+        los aliens.</string>
     <string name="ok">"Ok"</string>
     <string name="configTitulo">Dificultad</string>
     <string name="volver">Volver</string>
+    <string name="click_mal">¡Has perdido!</string>
+    <string name="longClick_bien1">¡Muy bien! Te quedan </string>
+    <string name="longClick_bien2"> aliens.</string>
+    <string name="longClick_ganado">¡Genial! ¡Has encontrado todos los aliens!</string>
+    <string name="longClick_mal">Lo siento, ahí no había alien. Has perdido</string>
 </resources>

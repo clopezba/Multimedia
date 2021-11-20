@@ -4,11 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/DAM2Alu10/AndroidStudioProjects/Multimedia/Practica2/app/src/main/res/layout/main.xml" value="0.1" />
+        <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1390625" />
+        <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/drawable/border.xml" value="0.1390625" />
         <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/drawable/cell_shape.xml" value="0.13518518518518519" />
+        <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1390625" />
+        <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/drawable/mal_background.xml" value="0.12239583333333333" />
         <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/layout/main.xml" value="0.12132725430597771" />
         <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/layout/principiante.xml" value="0.2" />
         <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/menu/menu.xml" value="0.1" />
+        <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/mipmap-anydpi-v26/mal.xml" value="0.12239583333333333" />
+        <entry key="..\:/Users/clopb/AndroidStudioProjects/Practica2/app/src/main/res/mipmap-anydpi-v26/mal_round.xml" value="0.12239583333333333" />
       </map>
     </option>
   </component>
