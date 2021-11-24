@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /**
      * Método al que se llama cuando se selecciona un ítem del menú
      * @param item El ítem que ha sido seleccionado. No puede ser nulo.
-     * @return valor de tipo boolean
+     * @return valor de tipo boolean. True si se procesó correctamente el click del menú.
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
