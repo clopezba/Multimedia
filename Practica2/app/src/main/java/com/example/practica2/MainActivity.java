@@ -39,11 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         //Inicia por defecto en el nivel principiante (0).
         seleccionarDificultad(nivel);
-
     }
-
     //--------------- MENÚ -------------------
-
     /**
      * Método para crear un menú de opciones y añadirle los ítems que contendrá.
      * @param menu El menú de opciones donde se colocarán los items.
@@ -55,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
-
     /**
      * Método al que se llama cuando se selecciona un ítem del menú
      * @param item El ítem que ha sido seleccionado. No puede ser nulo.
@@ -87,7 +83,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return super.onOptionsItemSelected(item);
     }
-
     /**
      * Método para crear un cuadro de diálogo que incluye las instrucciones del juego.
      * Texto con un botón para cerrarlo.
@@ -152,7 +147,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 contAliens = aliens;
                 setContentView(R.layout.activity_main); //Reinicio la vista para que no sume
                 crearTabla(filas,columnas);
-
                 break;
             case 1:
                 nivel = 1;
@@ -174,9 +168,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
         }
     }
-
     //---------------- CREAR Y RELLENAR MATIZ ---------------
-
     /**
      * Crea la matriz sobre la que se añadirán los botones. A estos se le añade un número aleatorio único que determinará
      * si hay alien o no.
@@ -220,7 +212,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ll.addView(fil);
         }
     }
-
     /**
      * Genera un ArrayList con tantos números aleatorios como celdas haya en la matriz.
      * @param celdas Número de celdas de la matriz
@@ -234,7 +225,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Collections.shuffle(list);
         return list;
     }
-
     /**
      * Crea una matriz del tamaño de la cuadrícula y la inicia con todos sus valores a 0
       * @param filas Número de filas de la matriz
@@ -250,7 +240,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return matriz;
     }
-
     /**
      * A partir de la matriz generada, recorre los elementos que contiene el layout. Si el elemento tiene un alien (según el valor de la 'Tag')
      * pone un número negativo en su respectiva posición de la matriz. Recorre los elementos adyacentes y aumenta su valor coreespondiente que
@@ -342,9 +331,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         return pistasAliens;
     }
-
     //------------------- MÉTODOS PULSACIONES -----------------------
-
     /**
      * Define la acción o acciones que se llevarán a cabo cuando se pulse sobre una vista de la aplicación (click corto)
      * @param view Elemento o vista que ha sido pulsado
@@ -370,7 +357,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             b.setOnLongClickListener(null);
         }
     }
-
     /**
      * Define la acción o acciones que se llevarán a cabo cuando se pulse con un click largo sobre una vista de la aplicación
      * @param view Elemento o vista que ha sido pulsado
@@ -400,7 +386,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //Si no escondía un alien
         else{
+            Button b = (Button) view;
             Toast.makeText(this, getString(R.string.longClick_mal), Toast.LENGTH_LONG).show();
+            b.setText(valores.get(view.getId()).toString());
             deshabilitarCeldas();
         }
         return false;
