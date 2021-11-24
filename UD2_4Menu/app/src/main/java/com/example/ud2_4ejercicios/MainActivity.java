@@ -14,7 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
+    /**
+     * Método al que se llama cuando se inicia la pantalla (Activity).
+     * En este método se pone la mayoría de los elementos para la inicialización (funciones, varaibles, etc.).
+     * @param savedInstanceState Permite volver a un estado anterior de la activiad cuando se vuelve a reiniciar. Admite valor nulo.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,14 +26,22 @@ public class MainActivity extends AppCompatActivity {
         TextView txt = (TextView) findViewById(R.id.txtOpciones);
         registerForContextMenu(txt);
     }
-
+    /**
+     * Método para crear un menú de opciones y añadirle los ítems que contendrá.
+     * @param menu El menú de opciones donde se colocarán los items.
+     * @return Valor  de tipo booleano: 'True' para que se muestre el menú, 'False' para que no se muestre.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
         return true;
     }
-
+    /**
+     * Método al que se llama cuando se selecciona un ítem del menú
+     * @param item El ítem que ha sido seleccionado. No puede ser nulo.
+     * @return valor de tipo boolean. True si se procesó correctamente el click del menú.
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
@@ -69,6 +81,13 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Método para crear un menú contextual, se le da la estructura con un recurso 'menu'
+     * @param menu_c El menú contextual que se construye
+     * @param v Vista donde se construirá el menú
+     * @param menuInfo Información adicional sobre el item para el que se muestra el menú contextual.
+     *                 Depende de la clase de la vista (v).
+     */
     @Override
     public void onCreateContextMenu(ContextMenu menu_c, View v, ContextMenu.ContextMenuInfo menuInfo) {
         MenuInflater menu = getMenuInflater();
@@ -76,6 +95,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreateContextMenu(menu_c, v, menuInfo);
     }
 
+    /**
+     * Método al que se llama cuando se selecciona un ítem del menú
+     * @param item El ítem que ha sido seleccionado. No puede ser nulo.
+     * @return valor de tipo boolean. True si se procesó correctamente el click del menú.
+     */
     @Override
     public boolean onContextItemSelected(MenuItem item) {
         AdapterView.AdapterContextMenuInfo info =

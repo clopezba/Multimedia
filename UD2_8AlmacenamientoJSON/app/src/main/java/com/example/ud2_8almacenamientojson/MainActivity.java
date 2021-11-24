@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
     ListView list;
     ArrayAdapter<String> adaptador;
 
+    /**
+     * Método al que se llama cuando se inicia la pantalla (Activity).
+     * En este método se pone la mayoría de los elementos para la inicialización (funciones, varaibles, etc.).
+     * @param savedInstanceState Permite volver a un estado anterior de la activiad cuando se vuelve a reiniciar. Admite valor nulo.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,11 +52,23 @@ public class MainActivity extends AppCompatActivity {
         list = (ListView) findViewById(R.id.lista);
 
     }
+    /**
+     * Creación de otra clase que hereda de AsyncTask para realizar la conexión en otro
+     * hilo separado del principal.
+     * Primer parámetro indica el tipo de parámentros que recibe la tarea para ejecutar.
+     * Segundo parámetro indica el tipo de unidades de progreso publicadas durante la computación en segundo plano.
+     *      En este caso es 'void' porque no se usará este parámetro.
+     * Tercer parámetro indica el tipo de resultado de la computación en segundo plano
+     */
     private class MyTask extends AsyncTask<String, Void, String> {
         StringBuilder result = null;
         HttpURLConnection urlConnection = null;
 
-        //Conectamos y leemos todo lo que tenga la web
+        /**
+         * Ejecuta un hilo en segundo plano. Se conecta a la URL y recoge los datos
+         * @param string Recibe los parámetros de la tarea
+         * @return Devuelve un resultado definido por la subclase de la tarea
+         */
         @Override
         protected String doInBackground(String... string) {
             try {
@@ -81,7 +98,10 @@ public class MainActivity extends AppCompatActivity {
             return result.toString(); //Devuelve todo lo que veo cuando accedo a la web
         }
 
-        //Recibe todo lo que recojo de la web en el método anterior
+        /**
+         * Se ejecuta en el hilo principal después del método anterior ('doInBackground()').
+         * @param result El resultado de la operación realizada en 'doInBackground()'
+         */
         @Override
         protected void onPostExecute(String result) {
             super.onPostExecute(result);

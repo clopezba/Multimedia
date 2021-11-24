@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
     Button btnInicial, btnNuevo;
     TextView txt;
     LinearLayout l;
+
+    /**
+     * Método al que se llama cuando se inicia la pantalla (Activity).
+     * En este método se pone la mayoría de los elementos para la inicialización (funciones, varaibles, etc.).
+     * @param savedInstanceState Permite volver a un estado anterior de la activiad cuando se vuelve a reiniciar. Admite valor nulo.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +36,11 @@ public class MainActivity extends AppCompatActivity {
         anadeHijos();
         cambiarVisibilidad();
     }
+
+    /**
+     * Recorre todos los ítems que contiene la vista (linearLayout) y aplica diferente texto según sea un
+     * Button o un TextView.
+     */
     public void recorrer(){
 
         l = (LinearLayout) findViewById(R.id.linear);
@@ -48,6 +59,11 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /**
+     * Añade de forma programática elementos a la vista (linearLayout).
+     * Añade dos botones y tres CheckBox y les asigna sus respectivos parámetros.
+     */
     public void anadeHijos(){
         l = (LinearLayout) findViewById(R.id.linear);
         for (int i=0; i<2; i++){
@@ -78,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
             l.addView(chck);
         }
     }
+
+    /**
+     * Cambia la visibilidad de un Button
+     */
     public void cambiarVisibilidad(){
         btnInicial.setVisibility(View.INVISIBLE);
         Log.d("consola", String.valueOf(btnInicial.getVisibility()));

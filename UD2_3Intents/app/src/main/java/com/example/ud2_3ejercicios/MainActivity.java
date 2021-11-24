@@ -20,6 +20,11 @@ public class MainActivity extends AppCompatActivity {
     Intent ejemplo;
     ActivityResultLauncher<Intent> someActivityResultLauncher;
 
+    /**
+     * Método al que se llama cuando se inicia la pantalla (Activity).
+     * En este método se pone la mayoría de los elementos para la inicialización (funciones, varaibles, etc.).
+     * @param savedInstanceState Permite volver a un estado anterior de la activiad cuando se vuelve a reiniciar. Admite valor nulo.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +32,12 @@ public class MainActivity extends AppCompatActivity {
         cambiarActividad(someActivityResultLauncher);
         obtenerResultado(ejemplo);
     }
+
+    /**
+     * A tavés de un Intent se cambia a la actividad indicada en una nueva pantalla.
+     * Con el evento onClick enviamos datos a la actividad.
+     * @param ResultLauncher
+     */
     public void cambiarActividad(ActivityResultLauncher<Intent> ResultLauncher){
         ejemplo = new Intent(this, Activity2.class);
         Coche car = new Coche("Ford", "Focus", 21500.50);
@@ -45,10 +56,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    /**
+     * Recibimos el resultado de la otra actividad
+     * @param in Recibe como parámetro el intent que recibe la repsuesta
+     */
     public void obtenerResultado(Intent in){
         someActivityResultLauncher = registerForActivityResult(
         new ActivityResultContracts.StartActivityForResult(),
         new ActivityResultCallback<ActivityResult>() {
+            /**
+             * Comprueba que la información que le llega tiene el código correcto para que reciba la información.
+             * @param result Resibe como parámentro el resultado de la actividad
+             */
             @Override
             public void onActivityResult(ActivityResult result) {
                 if (result.getResultCode() == Activity.RESULT_OK){

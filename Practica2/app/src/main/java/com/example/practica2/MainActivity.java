@@ -1,8 +1,3 @@
-/**
- * Aplicación juego BuscAliens, similar al buscaminas. Encontrar en una matriz todos los aliens escondidos sin equivocarse.
- * @author Cristina López
- * @version 1.0
- */
 package com.example.practica2;
 
 import androidx.annotation.NonNull;
@@ -22,6 +17,12 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+/**
+ * Aplicación juego BuscAliens, similar al buscaminas. Encontrar en una matriz todos los aliens escondidos sin equivocarse.
+ * @author Cristina López
+ * @version 1.0
+ */
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
     LinearLayout ll, fil;
