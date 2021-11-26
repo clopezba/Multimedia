@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CamposDeGolf</string>
+    <string name="seleccion">Seleccione la fuente de datos:</string>
+    <string name="bd">BASE DE DATOS</string>
+    <string name="web">WEB</string>
+    <string name="nombre">Nombre:</string>
+    <string name="idenfiticador">Idenfiticador:</string>
+    <string name="anadir">Añadir</string>
+    <string name="eliminar">ELIMINAR</string>
+    <string name="actualizar">ACTUALIZAR</string>
+    <string name="votar">VOTAR</string>
+    <string name="texto_verificacion">Esperando SMS de verificación de identidad...</string>
+</resources>
