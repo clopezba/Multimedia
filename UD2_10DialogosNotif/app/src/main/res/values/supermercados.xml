@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="supermercados">
+        <item>Carrefour</item>
+        <item>Mercadona</item>
+        <item>Alcampo</item>
+        <item>Lidl</item>
+        <item>Eroski</item>
+    </string-array>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ingredientes">
+        <item>Patatas</item>
+        <item>Huevos</item>
+        <item>Aceite</item>
+        <item>Harina</item>
+        <item>Azúcar</item>
+    </string-array>
+</resources>
