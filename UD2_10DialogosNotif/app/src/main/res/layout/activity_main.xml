@@ -36,7 +36,14 @@
             android:id="@+id/btnHora"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hora" />
+            android:text="@string/hora"
+            android:layout_marginBottom="70dp"/>
+
+        <Button
+            android:id="@+id/btnNotif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notif" />
 
     </LinearLayout>
 </LinearLayout>

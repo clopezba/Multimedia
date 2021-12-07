@@ -42,7 +42,7 @@ public class HoraActivity extends AppCompatActivity {
                         editHora.setText(hourOfDay + ":" + minute);
                     }
                 }, hora, minuto, true);
-               picker.show();
+               picker.show(); //IMPORTANTE!! No olvidar
             }
         });
         btnHor.setOnClickListener(new View.OnClickListener() {

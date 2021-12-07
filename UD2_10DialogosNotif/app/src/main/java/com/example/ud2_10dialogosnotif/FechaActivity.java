@@ -54,7 +54,7 @@ public class FechaActivity extends AppCompatActivity {
                         editFec.setText(dayOfMonth + "/" + (monthOfYear+1) + "/" + year);
                     }
                 }, year, month, day);
-                picker.show();
+                picker.show(); //IMPORTANTE! No olvidar
 
             }
         });

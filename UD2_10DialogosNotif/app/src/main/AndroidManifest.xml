@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UD2_10DialogosNotif">
         <activity
+            android:name=".AlertDetailsActivity"
+            android:exported="true" />
+        <activity
             android:name=".HoraActivity"
             android:exported="true" />
         <activity

@@ -9,4 +9,6 @@
     <string name="fec">FECHA</string>
     <string name="hora">Hora</string>
     <string name="time">HORA</string>
+    <string name="notif">Notificación</string>
+    <string name="alertDetails">Has pulsado sobre la notificación</string>
 </resources>
