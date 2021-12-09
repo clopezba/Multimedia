@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">UD3_MultimediaSoundPool</string>
+    <string name="audio1">Audio 1</string>
+    <string name="audio2">Audio 2</string>
+    <string name="pausa">Pausa</string>
+</resources>
