@@ -20,6 +20,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
     Button btnGrabar, btnParar, btnPlay;
     File audioFile;
+    MediaRecorder mediaRecorder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
         btnPlay = (Button) findViewById(R.id.btnPlay);
 
         if (ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.RECORD_AUDIO) !=
-                PackageManager.PERMISSION_GRANTED){
+                Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.RECORD_AUDIO}, 0);
         }
@@ -40,20 +40,20 @@ public class MainActivity extends AppCompatActivity {
         audioFile = new File(cw.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS),
                 "audio.3gp");
 
-        MediaRecorder mediaRecorder = new MediaRecorder();
-        mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-        mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-        mediaRecorder.setOutputFile(audioFile.getAbsolutePath());
-        try {
-            mediaRecorder.prepare();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        mediaRecorder = new MediaRecorder();
 
         btnGrabar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+                mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+                mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+                mediaRecorder.setOutputFile(audioFile.getAbsolutePath());
+                try {
+                    mediaRecorder.prepare();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 mediaRecorder.start();
             }
         });
@@ -61,19 +61,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mediaRecorder.stop();
+                mediaRecorder.release();
+                mediaRecorder = null;
             }
         });
-
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, Uri.parse(audioFile.getAbsolutePath()));
-
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), Uri.parse(audioFile.getAbsolutePath()));
                 mediaPlayer.start();
             }
         });
-
-
-
     }
 }
