@@ -33,9 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btnVer = (Button) findViewById(R.id.btnVideo);
-
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
 
@@ -55,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         recorder = new MediaRecorder();
         initRecorder();
 
+        setContentView(R.layout.activity_main);
+        btnVer = (Button) findViewById(R.id.btnVideo);
+
         //Usaremos el SurfaceView/SurfaceHolder para poder visualizar lo que se está grabando.
         SurfaceView cameraView = (SurfaceView) findViewById(R.id.superficie);
         holder = cameraView.getHolder();
@@ -67,8 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnVer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String ruta = videoFile.getAbsolutePath();
                 Intent intent = new Intent(getApplicationContext(), VideoActivity.class);
-                intent.putExtra("file", videoFile);
+                intent.putExtra("file", ruta);
                 startActivity(intent);
             }
         });
