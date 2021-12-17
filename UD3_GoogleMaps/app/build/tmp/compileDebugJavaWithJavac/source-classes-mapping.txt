@@ -1,6 +1,0 @@
-com/example/ud3_googlemaps/databinding/ActivityMapsBinding.java
- com.example.ud3_googlemaps.databinding.ActivityMapsBinding
-com/example/ud3_googlemaps/BuildConfig.java
- com.example.ud3_googlemaps.BuildConfig
-com/example/ud3_googlemaps/MapsActivity.java
- com.example.ud3_googlemaps.MapsActivity
